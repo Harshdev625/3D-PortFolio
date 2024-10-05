@@ -12,7 +12,7 @@ import C from "./tech/C.png";
 import Cplusplus from "./tech/C++.png";
 import postman from "./tech/postman.png";
 import mysql from "./tech/mysql.png";
-import markdown from "./tech/markdown.png";
+import MarkDown from "./tech/MarkDown.png";
 import bootstrap from "./tech/bootstrap.png";
 import express from "./tech/express.png";
 import git from "./tech/git.png";
@@ -61,7 +61,7 @@ export {
   Cplusplus,
   bootstrap,
   express,
-  markdown,
+  MarkDown,
   mysql,
   postman,
   NewsSphere,
