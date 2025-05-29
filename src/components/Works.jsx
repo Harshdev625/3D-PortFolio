@@ -3,7 +3,7 @@ import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
+import { github,externalLink  } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -15,6 +15,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  live_demo_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -30,10 +31,12 @@ const ProjectCard = ({
           <img
             src={image}
             alt="project_image"
-            className=" object-cover rounded-2xl"
+            className="object-cover rounded-2xl w-full h-full"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          {/* Icons */}
+          <div className="absolute inset-0 flex justify-end items-start m-3 gap-1 card-img_hover">
+            {/* GitHub Icon */}
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className="bg-black bg-opacity-70 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
@@ -44,14 +47,30 @@ const ProjectCard = ({
                 className="w-1/2 h-1/2 object-contain"
               />
             </div>
+
+            {/* Link Icon */}
+            {live_demo_link && (
+              <div
+                onClick={() => window.open(live_demo_link, "_blank")}
+                className="bg-black bg-opacity-70 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <img
+                  src={externalLink}
+                  alt="live demo"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
+            )}
           </div>
         </div>
 
+        {/* Content */}
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
+        {/* Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <p
@@ -66,6 +85,7 @@ const ProjectCard = ({
     </motion.div>
   );
 };
+
 
 const Works = () => {
   return (

@@ -4,6 +4,7 @@ import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
+import externalLink from "./externalLink.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -36,6 +37,10 @@ import ByteBridge from "./company/ByteBridge.png";
 import NewsSphere from "./NewsSphere.png";
 import StarkMart from "./StarkMart.png";
 import StarkTalk from "./StarkTalk.png";
+import ClipLink from "./ClipLink.png";
+import SmartOutputAnalyzer from "./SmartOutputAnalyzer.png";
+import StarkTasks from "./StarkTasks.png";
+import SDEverse from "./SDEverse.png";
 
 export {
   logo,
@@ -72,4 +77,9 @@ export {
   CodeForces,
   CodeChef,
   Leetcode,
+  ClipLink,
+  SmartOutputAnalyzer,
+  StarkTasks,
+  SDEverse,
+  externalLink
 };
